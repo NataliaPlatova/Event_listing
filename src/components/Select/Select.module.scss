@@ -1,0 +1,35 @@
+@import "../../Mixins";
+
+label {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 33px;
+  margin-right: 24px;
+  @include mediaQuery(728, max) {
+    margin-bottom: 16px;
+  }
+  @include mediaQuery(480, max) {
+    width: 100%;
+    margin-right: 0;
+  }
+
+  & > select {
+    margin-left: 20px;
+    padding: 9px 22px;
+    border: 1px solid #444444;
+    border-radius: 6px;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 33px;
+    min-width: 200px;
+    @include mediaQuery(728, max) {
+      display: block;
+      margin-left: 0;
+      margin-top: 8px;
+      padding: 9px 16px;
+    }
+    @include mediaQuery(480, max) {
+      width: 100%;
+    }
+  }
+}

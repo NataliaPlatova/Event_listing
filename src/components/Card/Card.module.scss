@@ -1,0 +1,63 @@
+@import "../../Mixins";
+
+.wrapper {
+  padding: 0 20px 40px 0;
+  width: 50%;
+  box-sizing: border-box;
+  &:nth-child(2n) {
+    padding-left: 20px;
+    padding-right: 0;
+    @include mediaQuery(728, max) {
+      padding: 20px 0;
+    }
+  }
+  @include mediaQuery(728, max) {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+.card {
+  padding: 40px;
+  min-height: 320px;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  background-position: 50% 50%;
+  @include mediaQuery(728, max) {
+    padding: 32px 20px;
+  }
+  @include mediaQuery(480, max) {
+    min-height: 260px;
+  }
+  &>span {
+    display: block;
+    width: 76px;
+    height: 76px;
+    border: 1px solid white;
+    border-radius: 6px;
+    font-weight: normal;
+    font-size: 48px;
+    line-height: 78px;
+    text-align: center;
+    @include mediaQuery(728, max) {
+      width: 50px;
+      height: 50px;
+      font-size: 32px;
+      line-height: 50px;
+    }
+  }
+
+  &>h2 {
+    font-weight: 900;
+    font-size: 42px;
+    line-height: 74px;
+    @include mediaQuery(728, max) {
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}

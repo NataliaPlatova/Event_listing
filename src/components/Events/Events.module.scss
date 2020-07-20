@@ -1,20 +1,28 @@
+@import "../../Mixins.scss";
+
 .eventsBlock {
     width: 90%;
     margin: 0 auto;
     background-color: white;
-    border-radius: 6px;
-    box-shadow: 0 16px 32px rgba(0, 0, 0, 12);
+    border-radius: 16px;
+    box-shadow: 0 16px 32px rgba(0, 0, 0, 0.12);
+    @include mediaQuery(728, max) {
+        width: 100%;
+    }
 }
 
 .container {
     width: 86%;
     margin: 0 auto;
     padding: 80px 0;
+    @include mediaQuery(480, max) {
+        padding: 40px 0;
+    }
 }
 
 .title {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 900;
     line-height: 66px;
-    margin-top: 20px;
+    margin-top: 16px;
 }
